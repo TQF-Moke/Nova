@@ -7,6 +7,7 @@ Widget::Widget(QWidget *parent) :
 {
     ui->setupUi(this);
 }
+//这里完全不知道下面这段怎么正常运作
 {
     this->setWindowFlags(Qt::FramelessWindowHint|Qt::WindowMinimizeButtonHint);
     this->setAttribute(Qt::WA_TranslucentBackground);
@@ -18,6 +19,7 @@ void Widget::paintEvent(QPaintEvent *e)
     QPainter painter(this);
     painter.drawPixmap(0,0,pix);
 }
+//-----------------
 Widget::~Widget()
 {
     delete ui;
